@@ -6,24 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link href="../css/login.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="../css/index.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">  
   </head>
   <body>
-    <form class="form-login">
-        <label for="inputAddress" class="sr-only">Endereço</label>
-        <input type="address" id="inputAddress" class="form-control" placeholder="Endereço" required="" autofocus="">
-        <label for="inputUser" class="sr-only">Usuário</label>
-        <input type="user" id="inputUser" class="form-control" placeholder="Usuário" required="" autofocus="">
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
+     
+
+    <form class="form-index row">
         
-        <button class="btn btn-lg btn-primary btn-block" onclick="conectar()" type="submit">Conectar</button>
+        <div id="element1">
+              <select class="selectpicker">
+               
+              </select>
+        </div>
+      <div id="element2">
+          <a href="config.html" class="btn btn-info btn-lg">
+              <span class="glyphicon glyphicon-cog"></span>
+            </a>
+        </div>   
+        <button class="btn btn-lg btn-primary btn-block" onclick="alterarArquivos()" type="submit" >Alterar</button>
     </form>
+   
+
+    
+        
+      
     <!-- Optional JavaScript -->
-    <script type="text/javascript" src="../js/db.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
+
   </body>
 </html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="../css/config.css" rel="stylesheet">
+  </head>
+  <body>
+    <form class="form-config">
+        <label for="inputAddress" class="sr-only">Endereço</label>
+        <input type="address" id="inputAddress" class="form-control" placeholder="Endereço" required="" autofocus="">
+        <label for="inputUser" class="sr-only">Usuário</label>
+        <input type="user" id="inputUser" class="form-control" placeholder="Usuário" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
+        <div class="form-group">
+          <label for="exampleInputFile">Arquivo 1</label>
+          <input type="file" class="form-control-file" id="inputFile1" aria-describedby="fileHelp" enctype="multipart/form-data" name="inputFile1">
+          <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputFile">Arquivo 2</label>
+            <input type="file" class="form-control-file" id="inputFile2" aria-describedby="fileHelp">
+            <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input.</small>
+          </div>
+          <div class="form-group">
+              <label for="exampleInputFile">Arquivo 3</label>
+              <input type="file" class="form-control-file" id="inputFile3" aria-describedby="fileHelp">
+              <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input.</small>
+            </div>
+        <button class="btn btn-lg btn-primary btn-block" onclick="salvar()" type="submit" >Salvar</button>
+    </form>
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="../js/db.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  </body>
+</html>

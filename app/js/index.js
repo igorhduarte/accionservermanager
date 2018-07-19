@@ -3,8 +3,6 @@ const {app, BrowserWindow} = require('electron')
   const url = require('url')
 
 
-  
-
   // Mantenha uma referencia global do objeto da janela, se você não fizer isso, a janela será
   // fechada automaticamente quando o objeto JavaScript for coletado.
   let win
@@ -13,6 +11,11 @@ const {app, BrowserWindow} = require('electron')
     // Criar uma janela de navegação.
     win = new BrowserWindow({width: 800, height: 600})
     win.setMenu(null)
+
+    if (typeof localStorage === "undefined" || localStorage === null) {
+      var LocalStorage = require('node-localstorage').LocalStorage;
+      localStorage = new LocalStorage('./scratch');
+    }
   
     // e carrega index.html do app.
     win.loadURL(url.format({
@@ -54,6 +57,29 @@ const {app, BrowserWindow} = require('electron')
       createWindow()
     }
   })
+
+  
+  function alterarArquivos(callback) {
+    var fs = require('fs'), ini = require('ini');
+    var config = ini.decode(fs.readFileSync('C:/Users/DEV10/Desktop/server.ini', 'utf-8'));
+    var newConfig = {};
+
+    newConfig.IPAPLICACAO = 'srv02'
+    newConfig.USUARIO = 'TESTE'
+    newConfig.SENHA = 'TESTE'
+    newConfig.SERVICO = config.SERVIDOR.SERVICO;
+    newConfig.BANCO = config.SERVIDOR.BANCO;
+    newConfig.PORTA = config.SERVIDOR.PORTA;
+
+    const writeIniFile = require('write-ini-file')
+ 
+    writeIniFile('C:/Users/DEV10/Desktop/server.ini', newConfig,{section: 'SERVIDOR'}).then(() => {
+        console.log('done')
+    })
+    
+   // fs.writeFileSync('C:/Users/DEV10/Desktop/server.ini', ini.stringify(newConfig, { section: 'SERVIDOR' }))
+  }
+    
   
   // Neste arquivo, você pode incluir o resto do seu aplicativo especifico do processo
   // principal. Você também pode colocar eles em arquivos separados e requeridos-as aqui.
